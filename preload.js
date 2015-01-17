@@ -13,7 +13,6 @@ GameApp.Preloader = {
   start: function() {
   
     _loader.addProgressListener(function(e) {
-      console.log(e);
       self.updateProgress();
     });
     _loader.start();
@@ -21,7 +20,6 @@ GameApp.Preloader = {
   
   onFilesFinished: function() {
     var self = this;
-    console.log("feeenish");
     // Delay the removal of the UI element so that there is a brief, more satifying period where the bar is full.
     setTimeout(function(){
       $(self._progressBarElement).hide();
@@ -30,7 +28,6 @@ GameApp.Preloader = {
         self._finishedCallback();
       }
     }, 800);
-    console.log("progress", "Preload done.");
     this._files = [];
   },
   
@@ -60,11 +57,9 @@ GameApp.Preloader = {
   
   fileWasLoaded: function (identifier) {
     var arrayLength = this._files.length;
-    console.log(identifier);
     for (var i = 0; i < arrayLength; i++) {
       if (this._files[i].filename === identifier || this._files[i].key === identifier) {
         this._files[i].isDone = true;
-        console.log("preloader", identifier + " marked as loaded.");
         return this.updateProgress();
       }
     }
