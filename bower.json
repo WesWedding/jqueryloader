@@ -1,0 +1,27 @@
+{
+  "name": "pxloader-progress",
+  "version": "1.0.0",
+  "homepage": "https://github.com/stickywes/jqueryloader",
+  "authors": [
+    "Weston Wedding <wes@wawco.com>"
+  ],
+  "description": "A middleware that updates a jQueryUI Progress widget using the PxLoader as a file loading backend.",
+  "main": "preload.js",
+  "keywords": [
+    "jquery",
+    "ui",
+    "pxloader"
+  ],
+  "dependencies": {
+    "jqueryui": "~1.11.1",
+    "PxLoader": "~1.0.0"
+  },
+  "license": "Unlicense",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
