@@ -18,12 +18,19 @@ $(function() {
 ```
 
 ### Adding a file
+
 ```
-GameApp.Preloader.addFileToList('quizSounds', './assets/audio/quiz-sound-effects.mp3');
+GameApp.Preloader.addImageFile('quizImage', 'assets/audio/quiz-sound-effects.mp3');
 ```
 
 ### Updating the progress bar using other libraries' "on file load" event callbacks (Howler.js example)
-(using: Preloader.fileWasLoaded(key, filename))
+(using: Preloader.addFileToList() followed by Preloader.fileWasLoaded())
+```
+GameApp.Preloader.addFileToList('quizSounds', 'assets/audio/quiz-sound-effects.mp3');
+```
+
+And then, later...
+
 ```
 var sounds = new Howl({
     urls: ['./assets/audio/quiz-sound-effects.mp3'],
