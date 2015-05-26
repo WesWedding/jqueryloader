@@ -13,7 +13,7 @@
     "pxloader"
   ],
   "dependencies": {
-    "jqueryui": "~1.11.1",
+    "jquery-ui": "~1.11.4",
     "PxLoader": "~1.0.0"
   },
   "license": "Unlicense",
